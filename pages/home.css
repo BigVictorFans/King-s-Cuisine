@@ -1,0 +1,21 @@
+
+
+.hero .img{
+    background-image: url(/images/food.png);
+    height: 93vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    filter: brightness(65%);
+    background-size: cover;
+}
+
+.hero .container{
+    filter: brightness(100%);
+    width: 800px;
+    border-radius: 15px;
+}
+
+.navbar{
+    width: 100vw;
+}
+
