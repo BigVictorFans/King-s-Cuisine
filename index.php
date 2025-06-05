@@ -36,8 +36,14 @@
       case '/admin':
         require "pages/admindashboard.php";
         break;
-      case '/review':
-        require "pages/review.php";
+      case '/orders/view':
+        require "pages/viewfood.php";
+        break;
+      case '/cart':
+        require "pages/cart.php";
+        break;
+      case '/feedback':
+        require "pages/feedback.php";
         break;
       //admin pages routes
       case '/admin/manage_foods':
@@ -48,6 +54,12 @@
         break;
       case '/admin/manage_foods/edit':
         require "pages/admin/manage_foods_edit.php";
+        break;
+      case '/admin/orders':
+        require "pages/admin/manage_orders.php";
+        break;
+      case '/admin/items':
+        require "pages/admin/manage_orders_items.php";
         break;
       // actions routes
       case '/auth/login':
@@ -61,6 +73,24 @@
         break;
       case '/foods/edit':
         require "includes/foods/edit.php";
+        break;
+      case '/add-cart':
+        require "pages/addcart.php";
+        break;
+      case '/cart/delete':
+        require "includes/cart/delete.php";
+        break;
+      case '/cart/update':
+        require "includes/cart/update.php";
+        break;
+      case '/cart/checkout':
+        require "includes/cart/checkout.php";
+        break;
+      case '/cart/done':
+        require "includes/cart/done.php";
+        break;
+      case '/feedback/add':
+        require "includes/feedback/sumbitfeedback.php";
         break;
       //orders routes
       case '/orders/beef':

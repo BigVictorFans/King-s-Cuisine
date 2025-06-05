@@ -1,4 +1,9 @@
-<?php require "parts/header.php"; ?>
+<?php require "parts/header.php"; 
+  if ( !isUserLoggedIn() ) {
+    header("Location: /dashboard");
+    exit;
+  }
+?>
     <!-- order navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid ">

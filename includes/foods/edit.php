@@ -1,5 +1,10 @@
 <?php
 
+  if ( !isEditor() ) {
+    header("Location: /admin");
+    exit;
+  }
+
     // 1. connect to database
     $database = connectToDB();
 

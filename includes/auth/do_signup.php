@@ -1,5 +1,7 @@
 <?php
 
+
+
     // Connect to Database
     $database = connectToDB();
 
@@ -8,7 +10,7 @@
     $email = $_POST["email"];
     $password = $_POST["password"];
     $confirm_password = $_POST["confirm_password"];
-
+    
     // 4. check for error
     if ( 
         empty( $name ) || 

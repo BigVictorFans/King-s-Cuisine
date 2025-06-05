@@ -17,35 +17,35 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand fs-3 ms-5" href="/">King's Cuisine</a>
+        <a class="navbar-brand fs-3 ms-5 text-warning" href="/">King's Cuisine</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end px-2" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ">
             <?php if ( isUserLoggedIn() ) : ?>
-              <?php if(isAdmin()) : ?>
-              <li class="nav-item mx-4 fs-3">
-                <a class="nav-link active" aria-current="page" href="/admin">Admin Dashboard</a>
+              <?php if(isEditor()) : ?>
+              <li class="nav-item mx-4 fs-3 ">
+                <a class="nav-link active text-warning" aria-current="page" href="/admin">Admin Dashboard</a>
               </li>
               <?php endif?>
               <li class="nav-item mx-4 fs-3">
-                <a class="nav-link active" aria-current="page" href="/orders/drinks">Order</a>
+                <a class="nav-link active text-warning" aria-current="page" href="/orders/drinks">Order</a>
               </li>
               <li class="nav-item mx-4 fs-3">
-                <a class="nav-link" href="#"><i class="bi bi-cart4"></i></a>
+                <a class="nav-link text-warning" href="/cart"><i class="bi bi-cart4"></i></a>
               </li>
               <li class="nav-item mx-4">
-                <a class="nav-link" href="/profile"><i class="bi bi-person-circle fs-3"></i></a>
+                <a class="nav-link text-warning" href="/profile"><i class="bi bi-person-circle fs-3"></i></a>
               </li>
             <?php else : ?>
               <li class="nav-item mx-4 fs-3">
-                <a class="nav-link active" aria-current="page" href="/signup">Sign Up</a>
+                <a class="nav-link active text-warning" aria-current="page" href="/signup">Sign Up</a>
               </li>
               <li class="nav-item mx-4 fs-3">
-                <a class="nav-link active" aria-current="page" href="/login">Login</a>
+                <a class="nav-link active text-warning" aria-current="page" href="/login">Login</a>
               </li>
             <?php endif; ?>
           </ul>

@@ -1,7 +1,7 @@
 <?php
 
   // check if the user is not an admin
-  if ( !isAdmin() ) {
+  if ( !isEditor() ) {
     header("Location: /admin");
     exit;
   }
@@ -20,7 +20,7 @@
 ?>
 <?php require "parts/header.php"; ?>
 
-<div class="container mx-auto my-5" style="max-width: 1050px;">
+<div class="container mx-auto my-5" style="max-width: 1050px; max-height: 3000px;">
       <div class="d-flex justify-content-between align-items-center mb-2">
         <h1 class="h1">Manage Foods and Drinks</h1>
         <div class="text-end">
@@ -54,7 +54,7 @@
                   white-space: normal;;">
                 <?php echo $food['description']; ?>
               </td>
-              <td><?php echo $food['price']; ?></td>
+              <td><?php echo 'RM ' . number_format($food['price'], 2); ?></td>
               <td>
                 <!-- western role -->
                 <?php if ( $food['type'] === 'western' ) : ?>

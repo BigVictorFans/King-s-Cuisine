@@ -1,4 +1,12 @@
-<?php require "parts/header.php"; ?>
+<?php require "parts/header.php";
+  if ( !isEditor() ) {
+    header("Location: /admin");
+    exit;
+  }
+
+?>
+
+
 
 <div class="container mx-auto my-5" style="max-width: 1050px;">
       <div class="d-flex justify-content-between align-items-center mb-2">
@@ -50,7 +58,7 @@
       </div>
       <div class="text-center">
         <a href="/admin/manage_foods" class="btn btn-link btn-sm"
-          ><i class="bi bi-arrow-left"></i> Back to Posts</a
+          ><i class="bi bi-arrow-left"></i> back to item management</a
         >
       </div>
     </div>

@@ -1,4 +1,6 @@
-<?php require "parts/header.php"; ?>
+<?php require "parts/header.php";
+
+?>
 
     <div class="container my-5 mx-auto" style="max-width: 500px;"> 
         <div class="card rounded shadow-sm mx-auto my-4" style="max-width: 500px;">

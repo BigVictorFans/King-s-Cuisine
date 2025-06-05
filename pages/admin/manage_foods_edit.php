@@ -1,6 +1,12 @@
 <?php
 
   // connect to database
+
+    if ( !isEditor() ) {
+    header("Location: /admin");
+    exit;
+  }
+
   $database = connectToDB();
 
   // get the id from the URL /manage-posts-edit?id=1

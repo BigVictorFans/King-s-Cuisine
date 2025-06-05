@@ -59,6 +59,11 @@ function isAdmin() {
   } 
   return false;
 }
+
+function isEditor() {
+  return isset( $_SESSION["user"] ) && ( $_SESSION["user"]['role'] === 'admin' || $_SESSION["user"]['role'] === 'editor' ) ? true : false;
+}
+
 ?>
 
 <?php
@@ -76,10 +81,9 @@ function FoodBox($foodtype) {
                             <?= htmlspecialchars($food["name"]) ?>
                         </h5>
                         <p class="fs-6"><?= htmlspecialchars($food["description"]) ?></p>
-                        <p><?= htmlspecialchars($food["price"]) ?></p> 
-                        <div class="d-flex justify-content-between">
-                            <a href="/review?id=<?= $food["id"]; ?>"><button type="button" class="btn btn-primary">Review Page</button></a>
-                            <a><button type="button" class="btn btn-success">Add To Cart</button></a>
+                        <p><?= 'RM ' . number_format( $food['price'], 2); ?></p> 
+                        <div class="d-flex justify-content-end">
+                            <a href="view?id=<?= $food["id"]; ?>"><button type="button" class="btn btn-success">Add To Cart</button></a>
                         </div>
                     </div>
                 </div>

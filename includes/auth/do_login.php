@@ -1,4 +1,6 @@
 <?php
+
+
     // Connect to Database
     $database = connectToDB();
 

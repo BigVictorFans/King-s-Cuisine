@@ -1,4 +1,6 @@
 <?php
+
+
     $database = connectToDB();
     $sql = "SELECT * FROM foods ORDER BY id DESC";
     $query = $database->prepare($sql);
